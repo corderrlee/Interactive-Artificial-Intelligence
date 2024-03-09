@@ -1,0 +1,7 @@
+import google.generativeai as genai
+
+model = genai.GenerativeModel('gemini-pro')
+chat = model.start_chat(history=[])
+
+response = chat.send_message(input())
+print(response.text)
